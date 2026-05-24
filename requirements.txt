@@ -1,0 +1,14 @@
+bert_score==0.3.13
+datasets==2.20.0
+matplotlib==3.10.9
+nltk==3.9.4
+numpy==2.4.6
+openai==2.38.0
+pandas==3.0.3
+scikit_learn==1.8.0
+scipy==1.17.1
+shap==0.51.0
+spacy==3.7.5
+torch==2.5.1+cu121
+tqdm==4.67.3
+transformers==4.45.2
