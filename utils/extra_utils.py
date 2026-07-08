@@ -175,7 +175,7 @@ def clean_explanation(e):
     return e
 
 def tokenize_single_answer(x,tokenizer,model_name):
-    if 'llama3' in model_name or 'gpt2' in model_name or 'phi2' in model_name or 'gemma' in model_name or 'qwen3' in model_name.lower():
+    if 'llama3' in model_name or 'gpt2' in model_name or 'phi2' in model_name or 'gemma' in model_name or 'qwen3' or 'olmo2' in model_name.lower():
         return tokenizer.encode(x,add_special_tokens=False)[0]
     else:
         return tokenizer.encode('\n'+x,add_special_tokens=False)[2:][0] # other models have leading char infront. remove it

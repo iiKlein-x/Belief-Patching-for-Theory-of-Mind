@@ -539,6 +539,8 @@ def find_token_range(tokenizer, token_array, substring,allow_lowercase=True,find
         #tok_to_start_from = 4
         if 'qwen3' in model_name.lower():
             tok_to_start_from = 3
+        elif 'olmo' in model_name.lower():
+            tok_to_start_from = 6
         else:
             tok_to_start_from = 4
     if find_sub_range: # For now only for non-chat.

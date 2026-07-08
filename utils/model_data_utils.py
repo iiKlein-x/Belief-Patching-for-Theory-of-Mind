@@ -37,10 +37,12 @@ def get_model_path(model_name):
             model_path = f"google/gemma-2-{model_name.split('-')[-1].lower()}"
     elif 'gpt2' in model_name:
         model_path = model_name
-    elif 'phi3-chat':
+    elif 'phi3-chat'in model_name:
         model_path = "microsoft/Phi-3-mini-4k-instruct"
     elif 'qwen3' in model_name.lower():
         model_path = "Qwen/Qwen3-4B-Instruct-2507"
+    elif 'olmo2' in model_name.lower():
+        model_path = "allenai/OLMo-2-1124-7B-Instruct"
     return model_path
 
 class ModelAndTokenizer:
