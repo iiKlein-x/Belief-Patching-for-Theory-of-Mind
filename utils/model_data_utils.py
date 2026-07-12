@@ -283,6 +283,15 @@ def load_hf_ds(ds_name,seed=0,tokenizer=None):
         with open('data/mydataset.jsonl', 'r') as f:
             ds = [json.loads(l) for l in f]
         #return ds
+    elif ds_name == 'dataset_1st':
+        with open('data/dataset_1st.jsonl', 'r') as f:
+            ds = [json.loads(l) for l in f]
+        #return ds
+
+    elif ds_name == 'dataset_2nd':
+        with open('data/dataset_2nd.jsonl', 'r') as f:
+            ds = [json.loads(l) for l in f]
+        #return ds
 
     
     else:

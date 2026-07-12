@@ -84,6 +84,24 @@ fs_examples = {"csqa":[
             'answer': "A",
             'explanation': "your example explanation here"
         }
+    ],
+
+    "dataset_1st": [      # ← added this
+        {
+            'question': "your example question here",
+            'choices': ["choice1", "choice2", "choice3"],
+            'answer': "A",
+            'explanation': "your example explanation here"
+        }
+    ],
+
+    "dataset_2nd": [      # ← added this
+        {
+            'question': "your example question here",
+            'choices': ["choice1", "choice2", "choice3"],
+            'answer': "A",
+            'explanation': "your example explanation here"
+        }
     ]
 
     }
