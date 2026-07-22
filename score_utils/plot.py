@@ -25,6 +25,8 @@ def main():
     parser.add_argument('--model_name',type=str,default='llama3-8B-chat')
     parser.add_argument('--type',type=str,default='diff_prob')
     parser.add_argument('--mode',type=str,default='STR')
+    parser.add_argument('--layer_start', default=0, type=int)
+    parser.add_argument('--layer_end', default=-1, type=int)
     args = parser.parse_args()
 
     seed = 0 # any random seed
@@ -55,8 +57,8 @@ def main():
             if plot_type == 'all':
                 ans_plot_path = os.path.join(plot_dir,f'{sample_id}_ans.png')
                 expl_plot_path = os.path.join(plot_dir,f'{sample_id}_expl.png')
-                plot_trace_heatmap(ans_score,ans_plot_path,type_ = args.type)
-                plot_trace_heatmap(expl_score,expl_plot_path,type_ = args.type)
+                plot_trace_heatmap(ans_score,ans_plot_path,type_ = args.type, layer_start=args.layer_start)
+                plot_trace_heatmap(expl_score,expl_plot_path,type_ = args.type, layer_start=args.layer_start)
             #else:
             #    ans_plot_path = os.path.join(plot_dir,f'{sample_id}_both.png') 
             #    plot_trace_barplot_joined(output_dir,expl_dir,answer_range,ans_plot_path,type_ = plot_type)

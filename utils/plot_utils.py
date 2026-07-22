@@ -6,7 +6,7 @@ from scipy import spatial
 from scipy.stats import rankdata
 
 
-def plot_trace_heatmap(result, savepdf=None, xlabel=None, type_='diff_logit'):
+def plot_trace_heatmap(result, savepdf=None, xlabel=None, type_='diff_logit', layer_start=0):
     score = result[type_]
     answer = result["answer"]
     ori_input = result["input_tokens"][0]
@@ -27,7 +27,10 @@ def plot_trace_heatmap(result, savepdf=None, xlabel=None, type_='diff_logit'):
         ax.invert_yaxis()
         ax.set_yticks([0.5 + i for i in range(len(score))])
         ax.set_xticks([0.5 + i for i in range(score.shape[1])])
-        ax.set_xticklabels(list(range(score.shape[1])), fontsize=10)
+        #ax.set_xticklabels(list(range(score.shape[1])), fontsize=10)
+        actual_layers = list(range(layer_start, layer_start + score.shape[1]))
+        ax.set_xticklabels(actual_layers, fontsize=10)
+        
         ax.set_yticklabels(labels, fontsize=8, ha='right')
         ax.tick_params(axis='y', which='major', labelsize=8, labelrotation=0)
         ax.set_xlabel('Layer' if xlabel is None else xlabel, fontsize=12)
