@@ -102,6 +102,38 @@ fs_examples = {"csqa":[
             'answer': "A",
             'explanation': "your example explanation here"
         }
+    ],
+    "tomi_1st": [      # ← added this
+            {
+                'question': "your example question here",
+                'choices': ["choice1", "choice2", "choice3"],
+                'answer': "A",
+                'explanation': "your example explanation here"
+            }
+    ],
+    "tomi_2nd": [      # ← added this
+                {
+                    'question': "your example question here",
+                    'choices': ["choice1", "choice2", "choice3"],
+                    'answer': "A",
+                    'explanation': "your example explanation here"
+                }
+    ],
+    "hitom_1st": [      # ← added this
+                {
+                    'question': "your example question here",
+                    'choices': ["choice1", "choice2", "choice3"],
+                    'answer': "A",
+                    'explanation': "your example explanation here"
+                }
+    ],
+    "hitom_2nd": [      # ← added this
+                    {
+                        'question': "your example question here",
+                        'choices': ["choice1", "choice2", "choice3"],
+                        'answer': "A",
+                        'explanation': "your example explanation here"
+                    }
     ]
 
     }
